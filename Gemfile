@@ -11,6 +11,7 @@ gem 'sass-rails', '~> 4.0'
 gem 'gravatar_image_tag'
 gem 'will_paginate'
 
+
 group :development do
 gem 'rspec-rails'
 gem 'faker'
