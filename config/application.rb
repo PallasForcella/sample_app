@@ -8,7 +8,6 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
-require File.expnad_path('../boot',_FILE_)
 require 'rails/all'
 #Bundler.require(:default, Rails.env) if defined?(Bundler)
 # require "rails/test_unit/railtie"

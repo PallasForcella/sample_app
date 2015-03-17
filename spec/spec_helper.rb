@@ -1,35 +1,9 @@
 require 'rubygems'
-require 'spork'
+
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
-Spork.prefork do
-  # Loading more in this block will cause your tests to run faster. However,
-  # if you change any configuration or code from libraries loaded here, you'll
-  # need to restart spork for it take effect.
-ENV[*RAILS_ENV*] ||= 'test'
-unless defined?(Rails)
-    require File.dirname(_FILE_) + */../config/environment*
-end
 
-require 'rspec/rails'
-
-Dir["#{File.dirname(_FILE_)}/support/**/*.rb"].each {|f| require f}
-
-Rspec.configure do |config|
-  config.mock_with :rspec
-
-  config.fixture_path = "#{::Ra}.root}/spec/fixtures"
-
-  config.use_transactional_fixtures = true
-  ActiveSupport::Dependencies.clear
-end
-end
-
-Spork.each_run do
-  # This code will be run each time you run your specs.
-
-end
 
 # --- Instructions ---
 # Sort the contents of this file into a Spork.prefork and a Spork.each_run
