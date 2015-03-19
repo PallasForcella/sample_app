@@ -6,7 +6,7 @@ RSpec.describe PagesController, type: :controller do
     render_views
 
   describe "GET #home" do
-    let:page = {:home}
+    expect(page).to have_title "Home"
     it "returns http success" do
       get :home
       expect(response).to have_http_status(:success)
@@ -17,9 +17,10 @@ RSpec.describe PagesController, type: :controller do
       expect(page).to have_title "Ruby on Rails Tutorial Sample App | Home"
   end
 end
+end
 
   describe "GET #contact" do
-    let:page = {:contact}
+    expect(page).to have_title "Contact"
     it "returns http success" do
       get :contact
       expect(response).to have_http_status(:success)
@@ -29,9 +30,9 @@ end
       expect(page).to have_title "Ruby on Rails Tutorial Sample App | Contact"
   end
 end
-
+end
    describe "GET #about" do
-    let:page = {:about}
+    expect(page).to have_title "About"
     it "returns http success" do
       get :about
       expect(response).to have_http_status(:success)
@@ -42,8 +43,6 @@ end
   end
 end
 end
-end
-
 class PagesController < ApplicationController
 
   def home
