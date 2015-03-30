@@ -38,6 +38,18 @@ RSpec.describe PagesController, type: :controller do
         expect(page).to have_title "About"
       end
     end
+     describe "GET #help" do
+      
+      it "returns http success" do
+        get :home
+        expect(response).to have_http_status(:success)
+      end
+
+      it "should have the right title" do
+        visit "/pages/help"
+        expect(page).to have_title "Help"
+      end
+    end
   end
 end
 
