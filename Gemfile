@@ -10,7 +10,8 @@ gem 'sass-rails', '~> 4.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'gravatar_image_tag'
 gem 'will_paginate'
-
+gem 'bootstrap-sass'
+gem 'sprockets'
 
 group :development do
 gem 'rspec-rails'

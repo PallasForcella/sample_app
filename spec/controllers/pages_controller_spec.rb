@@ -13,7 +13,7 @@ RSpec.describe PagesController, type: :controller do
       end
 
       it "should have the right title" do
-        visit "/pages/home"
+        visit root_path
         expect(page).to have_title "Home"
       end
     end
@@ -24,7 +24,7 @@ RSpec.describe PagesController, type: :controller do
         expect(response).to have_http_status(:success)
       end
        it "should have the right title" do
-        visit "/pages/contact"
+        visit contact_path
         expect(page).to have_title "Contact"
      end
    end
@@ -34,7 +34,7 @@ RSpec.describe PagesController, type: :controller do
         expect(response).to have_http_status(:success)
       end
        it "should have the right title" do
-        visit "/pages/about"
+        visit about_path
         expect(page).to have_title "About"
       end
     end
@@ -46,10 +46,11 @@ RSpec.describe PagesController, type: :controller do
       end
 
       it "should have the right title" do
-        visit "/pages/help"
+        visit help_path
         expect(page).to have_title "Help"
       end
     end
+
   end
 end
 
