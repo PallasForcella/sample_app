@@ -49,6 +49,8 @@ RSpec.describe PagesController, type: :controller do
         visit help_path
         expect(page).to have_title "Help"
       end
+
+      
     end
 
   end

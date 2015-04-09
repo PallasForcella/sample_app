@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  match '/signup', to: 'users#new', via: 'get'
+
   match '/home', to: 'pages#home', via: 'get'
 
   match '/contact', to: 'pages#contact', via: 'get'
